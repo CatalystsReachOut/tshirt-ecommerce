@@ -4,6 +4,9 @@ dotenv.config();
 const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost:27017/test"
 // console.log(MONGO_URL)
 
+// ADD THIS IS YOUR CONNECTION FILE
+mongoose.set('strictQuery', true);
+
 // Connect Database
 export const connectDB = mongoose.connect(MONGO_URL,{
     useNewUrlParser:true,

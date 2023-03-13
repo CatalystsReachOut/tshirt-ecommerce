@@ -12,6 +12,6 @@ import { isLoggedIn } from "../middlewares/userMiddlewares.js"
 router.route("/stripeKey").get(isLoggedIn, sendStripeKey)
 router.route("/razorpayKey").get(isLoggedIn, sendRazorpayKey)
 router.route("/captureStripe").post(isLoggedIn, captureStripePayment)
-router.route("/captureRazorpay").post(isLoggedIn, captureRazorpayPayment)
+router.route("/captureRazorpay").post(captureRazorpayPayment)
  
 export default router;
